@@ -16,7 +16,7 @@ class Course_craw():
         options = ChromeOptions()
         options.add_experimental_option("detach", True)
         options.add_argument("--disable-extensions")
-        # options.add_argument("--headless")
+        options.add_argument("--headless")
         options.add_argument("--incognito")
         options.add_argument("--window-size=1920x1080")
 
