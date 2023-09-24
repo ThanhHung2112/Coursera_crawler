@@ -11,6 +11,7 @@ class Course_craw():
         
         self.df = pd.read_csv("data/Coursera.csv")
         self.df["Specialized"] = None
+
         # Options
         service = Service(executable_path='Libs/chromedriver.exe')
         options = ChromeOptions()
@@ -27,7 +28,7 @@ class Course_craw():
         print("Starting")
         percent_step = len(self.df) // 10
 
-        for i in range(351, len(self.df)):
+        for i in range(len(self.df)):
 
             self.browser.get(self.df["Course URL"][i]) 
 
@@ -48,6 +49,7 @@ class Course_craw():
         print("Save results")
 
         self.df.to_csv("data/Coursera_2.csv", index=False)
+
         return
     
 Course_craw().Start_craw()  
