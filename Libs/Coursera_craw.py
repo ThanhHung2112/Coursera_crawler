@@ -54,3 +54,6 @@ class Course_craw():
     
 Course_craw().Start_craw()  
 
+from sklearn.neighbors import NearestNeighbors
+import numpy as np
+
